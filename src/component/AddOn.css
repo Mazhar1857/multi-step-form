@@ -1,0 +1,174 @@
+.add-on {
+
+
+    h1 {
+        color: var(--marine-blue);
+        margin-bottom: 7px;
+
+    }
+
+    >p {
+        color: grey;
+
+    }
+}
+
+.add-on-cards {
+
+
+
+    .card {
+        width: 100%;
+        height: 90px;
+        border: 1px solid rgb(212, 212, 212);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 10px;
+
+        h2 {
+            color: var(--marine-blue);
+            margin-bottom: 4px;
+        }
+
+        p {
+            color: grey;
+
+        }
+
+        >:last-child {
+            p {
+                color: var(--purplish-blue);
+            }
+        }
+
+        >:first-child {
+            display: flex;
+            align-items: center;
+
+        }
+
+        .check-box {
+
+            aspect-ratio: 1;
+            /* background-color: blue; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+            border: 1px solid rgb(199, 199, 199);
+
+            img {
+                width: 15px;
+                display: none;
+            }
+        }
+
+    }
+
+    .card:hover {
+        cursor: pointer;
+    }
+
+    .card.checked {
+        border: 1px solid blue;
+
+        .check-box {
+            background-color: blue;
+            border: none;
+
+            img {
+                display: inline-block;
+            }
+        }
+    }
+}
+
+@media(min-width:480px) {
+    .add-on {
+        width: 630px;
+        margin: 25px auto 0;
+
+        h1 {
+            font-size: 3em;
+        }
+
+        >p {
+            font-size: 1.4em;
+            margin-bottom: 30px;
+        }
+    }
+
+    .add-on-cards {
+
+        >:not(:last-child) {
+            margin-bottom: 25px;
+        }
+
+        .card {
+            padding-inline: 25px;
+
+            h2 {
+                font-size: 1.3em;
+            }
+
+            p {
+                font-size: 1.2em;
+            }
+
+            >:first-child {
+                gap: 30px;
+            }
+
+            .check-box {
+                width: 22px;
+            }
+        }
+    }
+}
+
+@media(max-width:480px) {
+    .add-on {
+        width: 90%;
+        margin: 0 auto;
+        padding: 25px 15px;
+        border-radius: 5px;
+        background-color: white;
+
+        h1 {
+            font-size: 2em;
+        }
+
+        >p {
+            font-size: 1em;
+            margin-bottom: 20px;
+        }
+    }
+
+    .add-on-cards {
+
+        >:not(:last-child) {
+            margin-bottom: 10px;
+        }
+
+        .card {
+            padding-inline: 15px;
+
+            h2 {
+                font-size: 1em;
+            }
+
+            p {
+                font-size: 0.9em;
+            }
+
+            >:first-child {
+                gap: 15px;
+            }
+
+            .check-box {
+                width: 25px;
+            }
+        }
+    }
+}

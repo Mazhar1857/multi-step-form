@@ -1,0 +1,203 @@
+.plans {
+
+
+    h1 {
+        color: var(--marine-blue);
+
+
+    }
+
+    p {
+        color: grey;
+
+    }
+
+    .plans-cards {
+        display: flex;
+
+        >div {
+            border-radius: 10px;
+
+            >:last-child {
+                >:first-child {
+                    font-weight: bold;
+                    color: var(--marine-blue);
+                }
+
+                >:nth-child(2) {
+                    color: grey;
+                }
+
+                >:last-child {
+                    color: var(--marine-blue);
+                }
+            }
+        }
+
+        >div.selected {
+            border: 1px solid blue;
+        }
+    }
+
+    .plans-cards>div.monthly>div>:last-child {
+        display: none;
+    }
+
+    .plans-cards>div.yearly>div>:last-child {
+        display: inline-block;
+    }
+
+    .plans-cards>div:hover {
+        cursor: pointer;
+    }
+
+    .plans-toggle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+
+        .plans-toggle-btn {
+            display: flex;
+            align-items: center;
+            width: 50px;
+            height: 25px;
+            background-color: var(--marine-blue);
+            border-radius: 100vmax;
+            position: relative;
+            padding-inline: 3px;
+        }
+
+        .plans-toggle-btn:hover {
+            cursor: pointer;
+        }
+
+        .plans-toggle-btn::before {
+            content: "";
+            width: 19px;
+            aspect-ratio: 1;
+            border-radius: 100vmax;
+            background-color: rgb(255, 255, 255);
+            position: absolute;
+            transition: 0.3s;
+        }
+
+        .plans-toggle-btn.monthly::before {
+            left: 3px;
+        }
+
+        .plans-toggle-btn.yearly::before {
+            left: calc(100% - 22px);
+        }
+    }
+
+}
+
+@media(min-width:480px) {
+    .plans {
+        width: 630px;
+        margin: 25px auto 0;
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 7px;
+        }
+
+        p {
+            font-size: 1.4em;
+            margin-bottom: 30px;
+        }
+
+        .plans-cards {
+            margin-bottom: 50px;
+            gap: 39px;
+
+            >div {
+                width: 223px;
+                padding: 30px 0 0 20px;
+                font-size: 1.4em;
+                border: 1px solid rgb(212, 212, 212);
+
+                img {
+                    margin-bottom: 50px;
+                }
+
+                >:last-child {
+
+                    >:first-child {
+                        font-size: 1em;
+                        margin-bottom: 4px;
+                    }
+
+                    >:nth-child(2) {
+                        font-size: 0.9em;
+                        margin-bottom: 0px;
+                    }
+
+                    >:last-child {
+                        font-size: 0.7em;
+                        margin-bottom: 5px;
+                        font-family: inherit;
+                    }
+                }
+            }
+
+            >div.monthly {
+                margin-bottom: 1.31em;
+            }
+        }
+
+    }
+}
+
+@media(max-width:480px) {
+    .plans {
+        width: 90%;
+        margin: 0 auto;
+        padding: 25px 20px;
+        background-color: white;
+        border-radius: 5px;
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 7px;
+        }
+
+        p {
+            font-size: 1em;
+            margin-bottom: 20px;
+        }
+
+        .plans-cards {
+            flex-direction: column;
+
+            gap: 10px;
+
+            >div {
+                display: flex;
+                align-items: start;
+                gap: 15px;
+                font-size: 1em;
+                padding: 15px;
+                border: 1px solid rgb(212, 212, 212);
+
+                img {
+                    width: 2.5em;
+                }
+
+
+            }
+        }
+
+        .plans-cards.monthly {
+            margin-bottom: 3.9em;
+        }
+
+    }
+
+
+    .plans-toggle.yearly {
+        margin-top: 1em;
+    }
+
+}

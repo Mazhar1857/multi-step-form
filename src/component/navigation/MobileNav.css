@@ -1,0 +1,44 @@
+.mobile-nav {
+    height: 200px;
+    width: 100%;
+    background-image: url(../../assets/bg-sidebar-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: cover 100%;
+    background-position: top;
+}
+
+.mobile-nav>div {
+    width: 60%;
+    margin: 0px auto;
+    padding: 25px 0;
+    display: flex;
+    justify-content: space-between;
+
+    >div {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    >div:hover {
+        cursor: pointer;
+    }
+
+    >div>:first-child {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 2.4em;
+        aspect-ratio: 1;
+        border-radius: 100vmax;
+        border: 1px solid white;
+        color: white;
+        font-weight: bold;
+    }
+
+    >div>:first-child.active {
+        background-color: var(--light-blue);
+        color: black;
+        border: none;
+    }
+}

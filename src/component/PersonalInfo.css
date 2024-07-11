@@ -1,0 +1,189 @@
+.personal-info {
+
+    >div {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    >div.invalid {
+        >:first-child {
+            position: absolute;
+            right: 0;
+            color: red;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+
+        input {
+            border: 1px solid red;
+        }
+    }
+
+    >div.valid {
+        >:first-child {
+            display: none;
+        }
+    }
+
+    h1 {
+        color: var(--marine-blue);
+        margin-bottom: 7px;
+
+    }
+
+    p {
+        color: grey;
+        margin-bottom: 30px;
+    }
+
+    label {
+
+        color: var(--marine-blue);
+    }
+
+    input {
+        width: 100%;
+        border: 1px solid rgb(211, 210, 210);
+        border-radius: 5px;
+        margin: 5px 0 20px 0;
+        font-size: 1.4em;
+        padding-left: 25px;
+        color: black;
+        font-family: inherit;
+    }
+
+    input:hover {
+        cursor: text;
+    }
+
+    input:focus {
+        border: 1px solid blue;
+        outline: none;
+    }
+}
+
+@media(min-width:480px) {
+    .personal-info {
+        width: 630px;
+        margin: 25px auto 0;
+
+
+        >div {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        >div.invalid {
+            >:first-child {
+                font-size: 0.9em;
+            }
+
+            input {
+                border: 1px solid red;
+            }
+        }
+
+        >div.valid {
+            >:first-child {
+                display: none;
+            }
+        }
+
+        h1 {
+            font-size: 3em;
+        }
+
+        p {
+            font-size: 1.4em;
+        }
+
+        label {
+            font-size: 1.2em;
+
+        }
+
+        input {
+            height: 60px;
+            margin: 5px 0 20px 0;
+            font-size: 1.4em;
+            padding-left: 25px;
+        }
+
+        input:hover {
+            cursor: text;
+        }
+
+        input:focus {
+            border: 1px solid blue;
+            outline: none;
+        }
+
+
+    }
+}
+
+@media(max-width:480px) {
+    .personal-info {
+        width: 90%;
+        margin: 0 auto;
+        padding: 25px 15px;
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 0px 15px 15px hsl(213, 69%, 94%);
+
+        >div {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        >div.invalid {
+            >:first-child {
+                font-size: 0.9em;
+            }
+
+            input {
+                border: 1px solid red;
+            }
+        }
+
+        >div.valid {
+            >:first-child {
+                display: none;
+            }
+        }
+
+        h1 {
+            font-size: 2em;
+        }
+
+        p {
+            font-size: 1em;
+        }
+
+        label {
+            font-size: 1.1em;
+
+        }
+
+        input {
+            height: 50px;
+            margin: 5px 0 20px 0;
+            font-size: 1em;
+            padding-left: 20px;
+        }
+
+        input:hover {
+            cursor: text;
+        }
+
+        input:focus {
+            border: 1px solid blue;
+            outline: none;
+        }
+
+
+    }
+}

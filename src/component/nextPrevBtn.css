@@ -1,0 +1,85 @@
+.next-previous-btn {
+    display: flex;
+    justify-content: space-between;
+
+
+    .previous {
+        border: none;
+        background-color: transparent;
+        font-size: 1.2em;
+        font-family: inherit;
+        color: grey;
+        position: relative;
+    }
+
+    .previous:hover {
+        cursor: pointer;
+    }
+
+    .previous:active {
+        transform: scale(0.97);
+    }
+
+    .previous.disable::before {
+        content: '';
+        inset: 0;
+        background-color: rgba(255, 255, 255, 0.7);
+        position: absolute;
+        z-index: 10;
+        cursor: not-allowed;
+    }
+
+    .previous.disable:active {
+        transform: scale(1);
+    }
+
+    .next {
+        width: 150px;
+        height: 55px;
+        font-size: 1.2em;
+        border-radius: 10px;
+        border: none;
+        background-color: var(--marine-blue);
+        color: white;
+        font-family: inherit;
+        position: relative;
+    }
+
+    .next:hover {
+        cursor: pointer;
+    }
+
+    .next:active {
+        transform: scale(0.98);
+    }
+
+    .next.disable::before {
+        content: '';
+        inset: 0;
+        background-color: rgba(255, 255, 255, 0.7);
+        position: absolute;
+        z-index: 10;
+        cursor: not-allowed;
+
+    }
+
+    .next.disable:active {
+        transform: scale(1);
+    }
+}
+
+@media(min-width:480px) {
+
+    .next-previous-btn {
+        margin-bottom: 15px;
+    }
+}
+
+
+@media(max-width:480px) {
+
+    .next-previous-btn {
+        height: 100%;
+        align-items: center;
+    }
+}
